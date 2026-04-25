@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { DM_Sans, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
+import Providers from '@/components/Providers'
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -22,15 +23,25 @@ export const metadata: Metadata = {
     template: '%s | BB Valley',
     default: 'BB Valley — Premium Pakistani Fashion',
   },
-  description: 'Shop Khaadi, J., Sana Safinaz, Limelight, Gul Ahmed, Maria B, Alkaram — all in one place. Fast delivery across Pakistan.',
+  description:
+    'Shop Khaadi, J., Sana Safinaz, Limelight, Gul Ahmed, Maria B, Alkaram — all in one place. Fast delivery across Pakistan.',
   metadataBase: new URL('https://bluebunnyvalley.com'),
+  openGraph: {
+    type: 'website',
+    locale: 'en_PK',
+    siteName: 'BB Valley',
+  },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en" className={`${dmSans.variable} ${cormorant.variable}`}>
       <body className="min-h-screen" style={{ backgroundColor: '#FAF7F2' }}>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

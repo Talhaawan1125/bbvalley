@@ -1,9 +1,5 @@
 'use client'
 
-// ================================================
-// src/app/not-found.tsx  (404 page)
-// ================================================
-
 import Link from 'next/link'
 
 export default function NotFound() {
