@@ -1,4 +1,9 @@
-export function TermsPageContent() {
+// ================================================================
+// FILE: src/app/terms/page.tsx
+// HOW: src/app → New Folder "terms" → New File "page.tsx"
+// ================================================================
+
+export default function TermsPage() {
   const sections = [
     {
       title: 'Acceptance of Terms',
@@ -6,20 +11,11 @@ export function TermsPageContent() {
     },
     {
       title: 'Products & Pricing',
-      content: `All products listed on BB Valley are:
-- Authentic items sourced from official brand partners
-- Priced in Pakistani Rupees (PKR)
-- Subject to availability
- 
-We reserve the right to change prices at any time. The price shown at checkout is the final price.`,
+      content: `All products listed on BB Valley are authentic items sourced from official brand partners, priced in Pakistani Rupees (PKR), and subject to availability. We reserve the right to change prices at any time. The price shown at checkout is the final price.`,
     },
     {
       title: 'Orders & Payment',
-      content: `When you place an order:
-- You will receive an SMS confirmation
-- Our team may call to verify before dispatch
-- Cash on Delivery (COD) — you pay when the order arrives
-- We reserve the right to cancel orders due to stock issues or suspicious activity`,
+      content: `When you place an order you will receive an SMS confirmation. Our team may call to verify before dispatch. Cash on Delivery (COD) means you pay when the order arrives. We reserve the right to cancel orders due to stock issues or suspicious activity.`,
     },
     {
       title: 'Shipping',
@@ -46,7 +42,7 @@ We reserve the right to change prices at any time. The price shown at checkout i
       content: 'For any questions about these Terms, contact us at hello@bluebunnyvalley.com or WhatsApp +92 300 0000000.',
     },
   ]
- 
+
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
       <div
@@ -57,12 +53,12 @@ We reserve the right to change prices at any time. The price shown at checkout i
         <h1 className="font-display text-5xl font-semibold text-[#FAF7F2] mb-3">Terms & Conditions</h1>
         <p className="text-[#FAF7F2]/40 text-sm">Last updated: January 2024</p>
       </div>
- 
+
       <div className="max-w-3xl mx-auto px-4 py-16 space-y-6">
         {sections.map(s => (
           <div key={s.title} className="bg-white rounded-xl p-6 border border-gray-100">
             <h2 className="font-display text-xl font-semibold text-[#1C1C1E] mb-3">{s.title}</h2>
-            <p className="text-sm text-gray-500 leading-relaxed whitespace-pre-line">{s.content}</p>
+            <p className="text-sm text-gray-500 leading-relaxed">{s.content}</p>
           </div>
         ))}
       </div>
